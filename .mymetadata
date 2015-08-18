@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jbpm4.4"
+  id="myeclipse.1439207457094"
+  context-root="/rise"
+  j2ee-spec="5.0"
+  archive="jbpm4.4.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

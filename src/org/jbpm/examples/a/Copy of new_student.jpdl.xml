@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="new_student" xmlns="http://jbpm.org/4.4/jpdl">
+   <start g="136,133,48,48" name="start1"/>
+   <task assignee="校区教务" g="124,234,92,52" name="是否选定班">
+      <transition g="-11,-18" name="否" to="客户维护"/>
+      <transition g="-13,-14" name="是" to="开班"/>
+   </task>
+   <task g="306,234,92,52" name="客户维护">
+      <transition g="-29,-9" name="退费" to="是否退费"/>
+      <transition g="-26,-7" name="选班" to="是否选定班级"/>
+   </task>
+   <task g="308,349,92,52" name="是否退费">
+      <transition g="-21,-15" name="是" to="end1"/>
+      <transition g="294,315:-17,-2" name="否" to="客户维护"/>
+   </task>
+   <task g="418,348,92,52" name="是否选定班级">
+      <transition g="464,260:-34,-18" name="否" to="客户维护"/>
+   </task>
+   <state g="125,351,92,52" name="开班">
+      <transition g="-24,-1" name="开班" to="end1"/>
+   </state>
+   <end g="240,453,48,48" name="end1"/>
+</process>
